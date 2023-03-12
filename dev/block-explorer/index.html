@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 	<title>Block Explorer</title>
@@ -46,52 +46,58 @@
 				<!-- 'display block' table -->
 				<h3 class="table-title" ng-if="block">Block</h3>
 				<table class="table table-striped" ng-if="block">
-					<tbody>
-						<tr>	
-							<td class="bold">Block Hash</td>
-							<td>{{ block.hash }}</td>
-						</tr>
-						<tr>	
-							<td class="bold">Index</td>
-							<td>{{ block.index }}</td>
-						</tr>
-						<tr>	
-							<td class="bold">Time Stamp</td>
-							<td>{{ block.timestamp }}</td>
-						</tr>
-						<tr>	
-							<td class="bold">Nonce</td>
-							<td>{{ block.nonce }}</td>
-						</tr>
-						<tr>	
-							<td class="bold">Previous Hash</td>
-							<td>{{ block.previousBlockHash }}</td>
-						</tr>
-						<tr>	
-							<td class="bold">Number Transactions</td>
-							<td>{{ block.transactions.length }}</td>
-						</tr>
-					</tbody>
+					<caption>Display</caption>
+					<th>
+						<tbody>
+							<tr>	
+								<td class="bold">Block Hash</td>
+								<td>{{ block.hash }}</td>
+							</tr>
+							<tr>	
+								<td class="bold">Index</td>
+								<td>{{ block.index }}</td>
+							</tr>
+							<tr>	
+								<td class="bold">Time Stamp</td>
+								<td>{{ block.timestamp }}</td>
+							</tr>
+							<tr>	
+								<td class="bold">Nonce</td>
+								<td>{{ block.nonce }}</td>
+							</tr>
+							<tr>	
+								<td class="bold">Previous Hash</td>
+								<td>{{ block.previousBlockHash }}</td>
+							</tr>
+							<tr>	
+								<td class="bold">Number Transactions</td>
+								<td>{{ block.transactions.length }}</td>
+							</tr>
+						</tbody>
+					</th>
 				</table>
 				<!-- end 'display block' table -->
 
 				<!-- 'display transaction' table -->
 				<h3 class="table-title" ng-if="transaction">Transaction</h3>
 				<table class="table table-striped" ng-if="transaction">
-					<tbody>
-						<tr>	
-							<td class="bold">Sender</td>
-							<td>{{ transaction.sender }}</td>
-						</tr>
-						<tr>	
-							<td class="bold">Recipient</td>
-							<td>{{ transaction.recipient }}</td>
-						</tr>
-						<tr>	
-							<td class="bold">Amount</td>
-							<td>{{ transaction.amount }}</td>
-						</tr>
-					</tbody>
+					<caption>Details</caption>
+					<th>
+						<tbody>
+							<tr>	
+								<td class="bold">Sender</td>
+								<td>{{ transaction.sender }}</td>
+							</tr>
+							<tr>	
+								<td class="bold">Recipient</td>
+								<td>{{ transaction.recipient }}</td>
+							</tr>
+							<tr>	
+								<td class="bold">Amount</td>
+								<td>{{ transaction.amount }}</td>
+							</tr>
+						</tbody>
+					</th>
 				</table>
 				<!-- end 'display transaction' table -->
 
@@ -99,6 +105,7 @@
 				<h3 class="table-title" ng-if="addressData">Address</h3>
 				<p id="balance-text" ng-if="addressData">(Balance: {{ addressData.addressBalance }})</p>
 				<table class="table table-striped" ng-if="addressData">
+					<caption>Desc</caption>
 					<thead>
 						<tr>
 							<th scope="col">Sender</th>
