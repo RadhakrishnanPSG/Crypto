@@ -79,7 +79,7 @@ Blockchain.prototype.proofOfWork = function(prevHash , blockData)
 Blockchain.prototype.chainIsValid = function(blockchain) {
 	let validChain = true;
 
-	for (var i = 1; i < blockchain.length; i++) {
+	for (let i = 1; i < blockchain.length; i++) {
 		const currentBlock = blockchain[i];
 		const prevBlock = blockchain[i - 1];
 		const blockHash = this.hash(currentBlock['nonce'],prevBlock['hash'], { transactions: currentBlock['transactions'], index: currentBlock['index'] });
